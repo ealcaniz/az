@@ -35,7 +35,8 @@
 #
 # Copyright 2016 Your name here, unless otherwise noted.
 #
-class eapjboss {
+class eapjboss ( $jboss_user = undef, $jboss_home = undef, $jboss_install_zip = undef, $jboss_hc = undef, $jboss_dc = undef, $jboss_pass = undef, $jboss_version = undef )
+{
  class { 'eapjboss::install': } ->
  class { 'eapjboss::config': } ->
  class { 'eapjboss::services': }
